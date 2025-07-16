@@ -35,22 +35,63 @@
     }
     .hero {
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
     }
     .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      color: #38bdf8;
     }
     .hero p {
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
+      color: #cbd5e1;
+      font-size: 1.1rem;
+    }
+    .section {
+      padding: 5rem 2rem;
+      background: linear-gradient(to bottom, #1e293b, #334155);
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.4rem;
+      color: #facc15;
+      margin-bottom: 1.5rem;
+    }
+    .section p {
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .problem-box {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border: 1px solid #334155;
+    }
+    .problem-box h3 {
+      color: #f97316;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .problem-box p {
+      font-size: 1rem;
       color: #cbd5e1;
     }
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem 2rem;
+      gap: 2.5rem;
+      padding: 5rem 2rem;
+      background: #0f172a;
     }
     .card {
       background: #1e293b;
@@ -60,12 +101,33 @@
     }
     .card h3 {
       color: #38bdf8;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+    }
+    .card p {
+      color: #cbd5e1;
+      font-size: 1rem;
+    }
+    .extended-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(to bottom, #334155, #1e293b);
+      text-align: center;
+    }
+    .extended-section h2 {
+      font-size: 2.2rem;
+      color: #facc15;
+      margin-bottom: 1.5rem;
+    }
+    .extended-section p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: #e2e8f0;
     }
     footer {
       background: #1e293b;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
       font-size: 0.9rem;
       color: #94a3b8;
     }
@@ -84,8 +146,31 @@
   </header>
 
   <section class="hero">
-    <h2>Unlock Your Future. Launch Big Ideas.</h2>
-    <p>We evaluate your potential, connect you with career opportunities, and let innovators pitch to real investors – all in one platform made for the next generation.</p>
+    <h2>We connect students with the companies they want to work for</h2>
+    <p>Helping teenagers launch into their dream careers by bridging the gap between talent and opportunity.</p>
+  </section>
+
+  <section class="section">
+    <h2>PROBLEM?</h2>
+    <p>Teens are thrust into a world they get overpowered in — overwhelmed by decisions, underprepared by systems.</p>
+    <div class="problems-grid">
+      <div class="problem-box">
+        <h3>⏳ TIME INTENSIVE</h3>
+        <p>Most teens are clueless about their future career path and don't know how to prepare.</p>
+      </div>
+      <div class="problem-box">
+        <h3>👣 NO EXPERIENCE</h3>
+        <p>Teenagers remain unprepared for the transition from high school to the real world.</p>
+      </div>
+      <div class="problem-box">
+        <h3>📉 NO GUIDANCE</h3>
+        <p>Ever-changing career plans. No solid foundation due to lack of guidance in early education period.</p>
+      </div>
+      <div class="problem-box">
+        <h3>⚠️ ERROR PRONE</h3>
+        <p>Lacking experience and having unrealistic expectations—leading to exploitation of underpaid and young workers.</p>
+      </div>
+    </div>
   </section>
 
   <section class="features">
@@ -105,6 +190,14 @@
       <h3>📈 Investor Access</h3>
       <p>Investors and sponsors can discover the brightest minds and game-changing concepts.</p>
     </div>
+  </section>
+
+  <section class="extended-section">
+    <h2>Our Vision</h2>
+    <p>We believe in unlocking potential. Launchpad Teens exists not just to match teens to jobs — but to nurture confidence, creativity, and leadership.
+    </p>
+    <p>With a powerful mix of personalized evaluation, real-world exposure, and startup-driven opportunities, we're creating an ecosystem where the leaders of tomorrow find their launchpad today.</p>
+    <p>From schools to startups, from classrooms to boardrooms — we're building futures. One teen at a time.</p>
   </section>
 
   <footer>
