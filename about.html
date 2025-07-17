@@ -6,74 +6,79 @@
   <title>About Us - Launchpad Teens</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #0f172a;
-      color: #f1f5f9;
-      font-family: 'Poppins', sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
     header {
-      background: #1e293b;
-      padding: 1.5rem;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 4rem 2rem;
       text-align: center;
     }
+
     header h1 {
-      font-size: 2rem;
-      color: #38bdf8;
+      font-size: 3rem;
+      color: #00ffe7;
     }
+
     nav {
       margin-top: 1rem;
     }
+
     nav a {
-      color: #38bdf8;
+      color: #00ffe7;
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: 600;
     }
-    .content {
-      padding: 6rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      background: linear-gradient(to bottom, #1e293b, #334155);
-      border-radius: 1rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
     }
+
     h2 {
-      font-size: 2.6rem;
-      color: #facc15;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    p {
-      font-size: 1.15rem;
-      line-height: 1.9;
-      color: #cbd5e1;
-      margin-bottom: 1.5rem;
-    }
-    strong {
-      color: #38bdf8;
-    }
-    .section-heading {
       font-size: 2rem;
-      color: #f97316;
-      margin-top: 4rem;
-      text-align: center;
+      margin-bottom: 1rem;
+      color: #00ffe7;
     }
-    .vision {
-      padding: 3rem 2rem 5rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #ccc;
     }
-    .vision p {
-      font-size: 1.15rem;
-      color: #94a3b8;
+
+    strong {
+      color: #00ffe7;
     }
+
+    .about-section {
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 231, 0.05);
+      margin-bottom: 2rem;
+    }
+
     footer {
-      background: #1e293b;
       text-align: center;
       padding: 2rem;
+      background: #111;
+      color: #777;
       font-size: 0.9rem;
-      color: #94a3b8;
     }
   </style>
 </head>
@@ -89,34 +94,30 @@
     </nav>
   </header>
 
-  <section class="content">
-    <h2>Meet the Founders</h2>
-    <p>
-      We are two Karachi-based founders: <strong>Ahmed Ali</strong> and <strong>Abdullah bin Sheeraz</strong>.
-      With intensive experience in technology and innovation, we created Launchpad Teens to bridge the gap between young talent and opportunity.
-    </p>
-    <p>
-      <strong>Ahmed</strong> is the communicator and pitch expert, focused on making ideas shine and securing support for student innovations.
-    </p>
-    <p>
-      <strong>Abdullah</strong> is the technical lead and full-stack developer, building the digital systems and tools that power our platform.
-    </p>
-    <p>
-      Together, we're committed to helping the next generation of dreamers, doers, and developers find their path.
-    </p>
-  </section>
+  <section class="container">
+    <div class="about-section">
+      <h2>Who We Are</h2>
+      <p>
+        We are two Karachi-based founders: <strong>Ahmed Ali</strong> and <strong>Abdullah bin Sheeraz</strong>.
+        With intensive experience in technology and innovation, we created Launchpad Teens to bridge the gap between young talent and opportunity.
+      </p>
+      <p>
+        <strong>Ahmed</strong> is the communicator and pitch expert, focused on making ideas shine and securing support for student innovations.
+      </p>
+      <p>
+        <strong>Abdullah</strong> is the technical lead and full-stack developer, building the digital systems and tools that power our platform.
+      </p>
+    </div>
 
-  <section class="vision">
-    <h2 class="section-heading">Why We Built Launchpad Teens</h2>
-    <p>
-      We’ve seen firsthand how teenagers are overwhelmed by unclear career paths, lack of mentorship, and outdated educational systems. Our mission is to bring clarity and direction to this chaos.
-    </p>
-    <p>
-      Launchpad Teens exists to empower students with the tools, insights, and connections they need to thrive in today’s competitive and rapidly shifting world. Whether it’s discovering strengths, building a career path, or pitching groundbreaking ideas — we’re here to help.
-    </p>
-    <p>
-      This isn’t just a business. It’s a movement.
-    </p>
+    <div class="about-section">
+      <h2>Why We Built Launchpad Teens</h2>
+      <p>
+        Too many young minds go unevaluated, misdirected, or unsupported. At Launchpad Teens, we aim to evaluate student skills, match them with potential career directions, and provide a launchpad for real-world impact.
+      </p>
+      <p>
+        We also offer a unique opportunity for innovators — especially those from initiatives like NASA Space Apps — to pitch their ideas and connect with investors, mentors, and a community that believes in pushing boundaries.
+      </p>
+    </div>
   </section>
 
   <footer>
