@@ -4,132 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Launchpad Teens</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
+
     body {
-      background: #0f172a;
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #f1f1f1;
       line-height: 1.6;
     }
+
     header {
-      background: #1e293b;
-      padding: 1.5rem;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 4rem 2rem;
       text-align: center;
     }
+
     header h1 {
-      font-size: 2rem;
+      font-size: 3rem;
+      color: #00ffe7;
     }
-    nav {
+
+    header nav {
       margin-top: 1rem;
     }
-    nav a {
-      color: #38bdf8;
+
+    header nav a {
+      color: #00ffe7;
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: 600;
     }
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
     }
-    .hero h2 {
-      font-size: 2.8rem;
-      margin-bottom: 1.2rem;
-      color: #38bdf8;
+
+    section {
+      padding: 4rem 0;
     }
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #cbd5e1;
-      font-size: 1.1rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ffe7;
     }
-    .section {
-      padding: 5rem 2rem;
-      background: linear-gradient(to bottom, #1e293b, #334155);
-      text-align: center;
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
-    .section h2 {
-      font-size: 2.4rem;
-      color: #facc15;
-      margin-bottom: 1.5rem;
+
+    .skills li {
+      background: #1f1f1f;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      flex: 1 1 200px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .section p {
-      color: #e2e8f0;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    .problems-grid {
+
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
-    .problem-box {
-      background: #1e293b;
-      color: #f1f5f9;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      border: 1px solid #334155;
+
+    .project-card {
+      background: #1c1c1c;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      border-left: 5px solid #00ffe7;
     }
-    .problem-box h3 {
-      color: #f97316;
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
+
+    .project-card:hover {
+      transform: scale(1.05);
     }
-    .problem-box p {
-      font-size: 1rem;
-      color: #cbd5e1;
+
+    .contact .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #00ffe7;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      padding: 5rem 2rem;
-      background: #0f172a;
+
+    .contact .btn:hover {
+      background: #00c2b7;
     }
-    .card {
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
-    }
-    .card h3 {
-      color: #38bdf8;
-      margin-bottom: 0.75rem;
-      font-size: 1.4rem;
-    }
-    .card p {
-      color: #cbd5e1;
-      font-size: 1rem;
-    }
-    .extended-section {
-      padding: 6rem 2rem;
-      background: linear-gradient(to bottom, #334155, #1e293b);
-      text-align: center;
-    }
-    .extended-section h2 {
-      font-size: 2.2rem;
-      color: #facc15;
-      margin-bottom: 1.5rem;
-    }
-    .extended-section p {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      font-size: 1.15rem;
-      color: #e2e8f0;
-    }
+
     footer {
-      background: #1e293b;
       text-align: center;
       padding: 2rem;
+      background: #111;
+      color: #777;
       font-size: 0.9rem;
-      color: #94a3b8;
     }
   </style>
 </head>
@@ -145,60 +132,46 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>We connect students with the companies they want to work for</h2>
-    <p>Helping teenagers launch into their dream careers by bridging the gap between talent and opportunity.</p>
-  </section>
+  <div class="container">
+    <section>
+      <h2>Unlock Your Potential</h2>
+      <p>Launchpad Teens helps students discover career paths and opportunities based on their strengths, interests, and ambition.</p>
+    </section>
 
-  <section class="section">
-    <h2>PROBLEM?</h2>
-    <p>Teens are thrust into a world they get overpowered in — overwhelmed by decisions, underprepared by systems.</p>
-    <div class="problems-grid">
-      <div class="problem-box">
-        <h3>⏳ TIME INTENSIVE</h3>
-        <p>Most teens are clueless about their future career path and don't know how to prepare.</p>
-      </div>
-      <div class="problem-box">
-        <h3>👣 NO EXPERIENCE</h3>
-        <p>Teenagers remain unprepared for the transition from high school to the real world.</p>
-      </div>
-      <div class="problem-box">
-        <h3>📉 NO GUIDANCE</h3>
-        <p>Ever-changing career plans. No solid foundation due to lack of guidance in early education period.</p>
-      </div>
-      <div class="problem-box">
-        <h3>⚠️ ERROR PRONE</h3>
-        <p>Lacking experience and having unrealistic expectations—leading to exploitation of underpaid and young workers.</p>
-      </div>
-    </div>
-  </section>
+    <section class="skills">
+      <h2>Key Benefits</h2>
+      <ul>
+        <li>🎯 Personalized Job Path Guidance</li>
+        <li>💼 Direct Industry Connections</li>
+        <li>📈 Future Career Forecasting</li>
+        <li>🚀 Pitch & Innovation Launchpads</li>
+      </ul>
+    </section>
 
-  <section class="features">
-    <div class="card">
-      <h3>🎓 Student Evaluation</h3>
-      <p>Discover your strengths through our assessment and get matched with ideal career paths.</p>
-    </div>
-    <div class="card">
-      <h3>🧭 Job Path Guidance</h3>
-      <p>Explore detailed roadmaps for careers that match your profile and passions.</p>
-    </div>
-    <div class="card">
-      <h3>💡 Pitch Your Idea</h3>
-      <p>Submit your startup idea or innovation and get in front of real investors and organizations.</p>
-    </div>
-    <div class="card">
-      <h3>📈 Investor Access</h3>
-      <p>Investors and sponsors can discover the brightest minds and game-changing concepts.</p>
-    </div>
-  </section>
+    <section class="projects">
+      <h2>Our Vision</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Career Evaluation</h3>
+          <p>We evaluate students based on aptitude and interest to find what job roles fit best — whether that’s engineering, design, data science, or leadership.</p>
+        </div>
+        <div class="project-card">
+          <h3>Idea Incubation</h3>
+          <p>Students and young entrepreneurs can pitch their concepts — some of which could be featured in programs like the NASA Space Apps Challenge.</p>
+        </div>
+        <div class="project-card">
+          <h3>Global Readiness</h3>
+          <p>We prepare teens to compete on a global level through technical knowledge, communication skills, and exposure to real-world projects.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="extended-section">
-    <h2>Our Vision</h2>
-    <p>We believe in unlocking potential. Launchpad Teens exists not just to match teens to jobs — but to nurture confidence, creativity, and leadership.
-    </p>
-    <p>With a powerful mix of personalized evaluation, real-world exposure, and startup-driven opportunities, we're creating an ecosystem where the leaders of tomorrow find their launchpad today.</p>
-    <p>From schools to startups, from classrooms to boardrooms — we're building futures. One teen at a time.</p>
-  </section>
+    <section class="contact">
+      <h2>Ready to Take Off?</h2>
+      <p>Start your journey with us today. Discover your future, build your pitch, and connect with real opportunities.</p>
+      <a class="btn" href="evaluate.html">Get Evaluated</a>
+    </section>
+  </div>
 
   <footer>
     &copy; 2025 Launchpad Teens. All rights reserved.
