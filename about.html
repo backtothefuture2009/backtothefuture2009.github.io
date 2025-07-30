@@ -1,150 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Launchpad Teens</title>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f0f;
-      color: #f1f1f1;
-      margin: 0;
-      padding: 0;
-    }
-
-    .animate-slide-in {
-      animation: slideIn 0.5s ease-out forwards;
-    }
-
-    .animate-fade-in {
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #00ffe7, #00b4d8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .nav-link:hover {
-      background: linear-gradient(90deg, #00ffe7, #00b4d8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transition: all 0.3s ease;
-    }
-
-    .about-section {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 255, 231, 0.2);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="root"></div>
+  <header>
+    <div class="container">
+      <h1>About Launchpad Teens</h1>
+      <p>Meet the minds behind the mission</p>
+    </div>
+  </header>
 
-  <script type="text/babel">
-    const { useState, useEffect } = React;
+  <section class="container">
+    <h2>Who We Are</h2>
+    <p>We are two Karachi-based founders passionate about reshaping how teens discover their future careers. Our mission is to guide students into the workforce through tailored evaluations, real opportunities, and by connecting them with teams and mentors worldwide.</p>
+  </section>
 
-    const Header = () => {
-      const [isScrolled, setIsScrolled] = useState(false);
-
-      useEffect(() => {
-        const handleScroll = () => {
-          setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-      }, []);
-
-      return (
-        <header className={`py-8 px-4 sm:px-6 lg:px-8 text-center transition-all duration-300 ${isScrolled ? 'bg-[#1a1a2e]/90 backdrop-blur-md' : 'bg-gradient-to-r from-[#1a1a2e] to-[#16213e]'}`}>
-          <h1 className="text-4xl sm:text-5xl font-bold gradient-text animate-slide-in">🚀 Launchpad Teens</h1>
-          <nav className="mt-6 flex justify-center gap-4 sm:gap-6">
-            {['Home', 'About', 'Evaluate', 'Pitch', 'Contact'].map((item, index) => (
-              <a
-                key={item}
-                href={`${item.toLowerCase()}.html`}
-                className="text-lg font-semibold text-[#00ffe7] nav-link animate-slide-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-        </header>
-      );
-    };
-
-    const AboutSection = ({ title, children, index }) => (
-      <div
-        className="about-section bg-[#1f1f1f] p-6 rounded-xl shadow-lg mb-6 animate-slide-in"
-        style={{ animationDelay: `${index * 0.1}s` }}
-      >
-        <h2 className="text-2xl sm:text-3xl font-semibold gradient-text mb-4">{title}</h2>
-        {children}
+  <section class="container">
+    <h2>Our Founders</h2>
+    <div class="projects project-grid">
+      <div class="project-card">
+        <h3>Ahmed Ali</h3>
+        <p>The pitch guy and lead communicator. Ahmed focuses on outreach, collaboration, and investor connections.</p>
       </div>
-    );
-
-    const Footer = () => (
-      <footer className="text-center py-6 bg-[#111] text-[#777] text-sm animate-fade-in">
-        &copy; 2025 Launchpad Teens. All rights reserved.
-      </footer>
-    );
-
-    const App = () => (
-      <div>
-        <Header />
-        <section className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <AboutSection title="Who We Are" index={0}>
-            <p className="text-base sm:text-lg text-[#ccc] mb-4">
-              We are two Karachi-based founders: <span className="font-semibold gradient-text">Ahmed Ali</span> and <span className="font-semibold gradient-text">Abdullah bin Sheeraz</span>.
-              With intensive experience in technology and innovation, we created Launchpad Teens to bridge the gap between young talent and opportunity.
-            </p>
-            <p className="text-base sm:text-lg text-[#ccc] mb-4">
-              <span className="font-semibold gradient-text">Ahmed</span> is the communicator and pitch expert, focused on making ideas shine and securing support for student innovations.
-            </p>
-            <p className="text-base sm:text-lg text-[#ccc]">
-              <span className="font-semibold gradient-text">Abdullah</span> is the technical lead and full-stack developer, building the digital systems and tools that power our platform.
-            </p>
-          </AboutSection>
-          <AboutSection title="Why We Built Launchpad Teens" index={1}>
-            <p className="text-base sm:text-lg text-[#ccc] mb-4">
-              Too many young minds go unevaluated, misdirected, or unsupported. At Launchpad Teens, we aim to evaluate student skills, match them with potential career directions, and provide a launchpad for real-world impact.
-            </p>
-            <p className="text-base sm:text-lg text-[#ccc]">
-              We also offer a unique opportunity for innovators — especially those from initiatives like NASA Space Apps — to pitch their ideas and connect with investors, mentors, and a community that believes in pushing boundaries.
-            </p>
-          </AboutSection>
-        </section>
-        <Footer />
+      <div class="project-card">
+        <h3>Abdullah Bin Sheeraz</h3>
+        <p>The tech mind and main developer. Abdullah leads all things tech—designing, developing, and managing the platform.</p>
       </div>
-    );
+    </div>
+  </section>
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
+  <section class="container">
+    <h2>Why We Built Launchpad Teens</h2>
+    <p>We noticed a gap in teen guidance and job opportunities. There were too many capable students with no direction. Our goal is to empower them with direction, clarity, and opportunity.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Launchpad Teens. All rights reserved.</p>
+  </footer>
 </body>
 </html>
